@@ -1,0 +1,34 @@
+<h1>ember-animated 1.0.4 & ember-tracked-built-in 3.1.0</h1>
+
+<h2>EmberArray with animated-each</h2>
+<AnimatedContainer>
+  <ul>
+    {{#animated-each this.emberArray use=this.transition as |item|}}
+      <li>
+        {{item}}
+      </li>
+    {{/animated-each}}
+  </ul>
+</AnimatedContainer>
+
+<h2>TrackedArray with animated-each</h2>
+<AnimatedContainer>
+  <ul>
+    {{#animated-each this.trackedArray use=this.transition as |item|}}
+      <li>
+        {{item}}
+      </li>
+    {{/animated-each}}
+  </ul>
+</AnimatedContainer>
+
+<h2>TrackedArray with each</h2>
+<ul>
+  {{#each this.trackedArray as |item|}}
+    <li>
+      {{item}}
+    </li>
+  {{/each}}
+</ul>
+
+<button type="button" {{on "click" this.addItem}}>Add item</button>
